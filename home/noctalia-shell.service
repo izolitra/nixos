@@ -1,0 +1,14 @@
+[Unit]
+Description=Noctalia desktop shell
+PartOf=graphical-session.target
+After=graphical-session-pre.target
+
+[Service]
+Type=simple
+ExecStart=/run/current-system/sw/bin/noctalia
+ExecStartPost=-/run/current-system/sw/bin/systemctl --user stop waybar-panel.service
+Restart=on-failure
+RestartSec=2
+
+[Install]
+WantedBy=graphical-session.target

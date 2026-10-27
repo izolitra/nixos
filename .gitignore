@@ -1,0 +1,11 @@
+.direnv/
+result
+result-*
+.env
+.env.*
+secrets/
+*.age
+*.key
+*.pem
+*.p12
+*.pfx
