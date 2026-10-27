@@ -9,6 +9,7 @@ This repository contains the current desktop's NixOS configuration, Hyprland con
 - `flake.nix` and `flake.lock` pin Nixpkgs and Noctalia. Noctalia is installed as a system package, so it is reproduced on a new machine without a separate `nix profile install`.
 - `hosts/desktop/` contains the current PC's NixOS configuration, Hyprland settings, Happ module and generated hardware configuration.
 - `home/hyprland.lua` adds Ctrl+Shift+S for a region screenshot copied only to the clipboard.
+- `home/ghostty-config.ghostty` makes Ctrl+C copy a Ghostty selection and interrupt a command when nothing is selected.
 - `home/desktop/noctalia-settings.toml` contains the exact GUI settings from this PC, including two-monitor lock-screen positions. `home/laptop/noctalia-settings.toml` has the portable Dracula theme without those positions.
 - `home/noctalia-shell.service` starts Noctalia in the graphical session.
 - `scripts/restore-home.sh` installs the user settings with timestamped backups; `scripts/save.sh` snapshots Noctalia settings, reviews the diff, commits and pushes.

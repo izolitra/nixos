@@ -22,6 +22,7 @@ install_config() {
 }
 
 install_config "$repo_dir/home/hyprland.lua" "$config_dir/hypr/hyprland.lua" hyprland.lua
+install_config "$repo_dir/home/ghostty-config.ghostty" "$config_dir/ghostty/config.ghostty" ghostty-config.ghostty
 install_config "$repo_dir/home/$host_name/noctalia-settings.toml" "$state_dir/noctalia/settings.toml" noctalia-settings.toml
 install_config "$repo_dir/home/noctalia-shell.service" "$config_dir/systemd/user/noctalia-shell.service" noctalia-shell.service
 install_config "$repo_dir/home/waybar-config.jsonc" "$config_dir/waybar/config.jsonc" waybar-config.jsonc
