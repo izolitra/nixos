@@ -70,7 +70,7 @@ widget_order = [ "lockscreen-login-box@HDMI-A-2", "lockscreen-login-box@HDMI-A-1
 builtin = "Dracula"
 
 [wallpaper.default]
-path = "/nix/store/10a2wdma6mj8nm3w86if5jarh2rlbq0b-noctalia-5.3.0/share/noctalia/assets/noctalia-wallpaper.png"
+path = "/home/yaroslave/nixos/assets/night-garage.png"
 
 [wallpaper.last]
-path = "/nix/store/10a2wdma6mj8nm3w86if5jarh2rlbq0b-noctalia-5.3.0/share/noctalia/assets/noctalia-wallpaper.png"
+path = "/home/yaroslave/nixos/assets/night-garage.png"

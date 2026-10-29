@@ -1,0 +1,4 @@
+# Show a compact system summary in new interactive terminals after Fastfetch is installed.
+if [[ $- == *i* ]] && command -v fastfetch >/dev/null 2>&1; then
+    fastfetch
+fi

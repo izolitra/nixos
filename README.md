@@ -10,6 +10,8 @@ This repository contains the current desktop's NixOS configuration, Hyprland con
 - `hosts/desktop/` contains the current PC's NixOS configuration, Hyprland settings, Happ module and generated hardware configuration.
 - `home/hyprland.lua` adds Ctrl+Shift+S for a region screenshot copied only to the clipboard.
 - `home/ghostty-config.ghostty` makes Ctrl+C copy a Ghostty selection and interrupt a command when nothing is selected.
+- `home/noctalia-layout.toml` configures the slim top bar and a full-height left Noctalia bar with a taskbar and bottom launcher, without a second dock. It retains Dracula. Weather uses approximate IP location.
+- `assets/night-garage.png` is an original wallpaper without baked-in UI. `home/fastfetch-config.jsonc` supplies a compact NixOS system readout; Fastfetch and JetBrainsMono Nerd Font are installed by the desktop NixOS config.
 - `home/desktop/noctalia-settings.toml` contains the exact GUI settings from this PC, including two-monitor lock-screen positions. `home/laptop/noctalia-settings.toml` has the portable Dracula theme without those positions.
 - `home/noctalia-shell.service` starts Noctalia in the graphical session.
 - `scripts/restore-home.sh` installs the user settings with timestamped backups; `scripts/save.sh` snapshots Noctalia settings, reviews the diff, commits and pushes.

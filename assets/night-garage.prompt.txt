@@ -1,0 +1,9 @@
+Use case: stylized-concept
+Asset type: desktop wallpaper for a 1920x1080 screen, landscape 16:9 composition
+Primary request: original atmospheric anime illustration of a nighttime JDM garage scene, with a low-slung Japanese sports coupe parked beneath soft garage lights. A lone anime-styled young adult in a dark hoodie stands near the car, subtly integrated into the scene. Mood of quiet urban night, not flashy racing.
+Scene/backdrop: dim garage opening onto a rain-slick night city, layered concrete and metal surfaces.
+Style/medium: polished hand-painted anime background art with cinematic depth and restrained detail.
+Composition/framing: wide image; leave the upper 30 pixels and far left 50 pixels visually calm for a slim top panel and vertical dock; main focal subjects center-right. No interface elements embedded in the picture.
+Lighting/mood: soft cinematic ambient light, muted lavender and graphite shadows with subdued cool highlights.
+Color palette: dark charcoal, smoky violet, dusty lavender, subtle warm pale highlights; harmonize with Dracula-style dark UI without adopting its exact color palette.
+Constraints: wallpaper only; no panel, no dock, no windows, no terminal, no icons, no text, no logos, no watermark; no visible license plates or branding.

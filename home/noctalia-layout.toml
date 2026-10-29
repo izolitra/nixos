@@ -1,0 +1,85 @@
+# Noctalia 5.3 layout. Keep the existing Dracula palette in settings.toml.
+[bar]
+order = ["left_dock", "default"]
+
+[bar.default]
+position = "top"
+thickness = 28
+margin_ends = 0
+margin_edge = 0
+padding = 8
+widget_spacing = 4
+scale = 0.82
+font_scale = 0.95
+background_opacity = 0.84
+border = "outline"
+border_width = 0.5
+radius = 4
+radius_top_left = 0
+radius_top_right = 0
+radius_bottom_left = 4
+radius_bottom_right = 4
+concave_edge_corners = false
+shadow = true
+capsule = false
+start = ["workspaces"]
+center = ["weather", "divider", "clock"]
+end = ["tray", "network", "volume", "bluetooth", "battery", "notifications", "session"]
+
+# A vertical Noctalia bar provides the full-height slim dock from the reference.
+[bar.left_dock]
+position = "left"
+thickness = 44
+margin_ends = 0
+margin_edge = 0
+padding = 6
+widget_spacing = 5
+scale = 0.94
+background_opacity = 0.84
+border = "outline"
+border_width = 0.5
+radius = 0
+concave_edge_corners = false
+shadow = true
+capsule = false
+start = ["taskbar"]
+center = []
+end = ["launcher"]
+
+[widget.workspaces]
+style = "focus_hint"
+show_labels = false
+show_icons = false
+focused_color = "primary"
+occupied_color = "secondary"
+empty_color = "surface_variant"
+
+[widget.weather]
+show_condition = false
+show_temperature = true
+
+[widget.divider]
+type = "text"
+text = "│"
+color = "outline"
+interactive = false
+
+[widget.clock]
+format = "{:%a %d %b  ·  %H:%M}"
+tooltip_format = "{:%A, %d %B %Y}"
+
+[location]
+auto_locate = true
+
+[widget.taskbar]
+type = "taskbar"
+pinned = ["com.mitchellh.ghostty", "firefox", "org.kde.dolphin", "org.telegram.desktop"]
+show_running = true
+show_active_indicator = true
+active_indicator_color = "primary"
+icon_scale = 1.2
+item_spacing = 5
+group_by_workspace = false
+
+[dock]
+enabled = false

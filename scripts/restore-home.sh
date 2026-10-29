@@ -23,7 +23,14 @@ install_config() {
 
 install_config "$repo_dir/home/hyprland.lua" "$config_dir/hypr/hyprland.lua" hyprland.lua
 install_config "$repo_dir/home/ghostty-config.ghostty" "$config_dir/ghostty/config.ghostty" ghostty-config.ghostty
+install_config "$repo_dir/home/fastfetch-config.jsonc" "$config_dir/fastfetch/config.jsonc" fastfetch-config.jsonc
+if [[ ! -e "$HOME/.bashrc" && ! -L "$HOME/.bashrc" ]]; then
+  install_config "$repo_dir/home/bashrc-fastfetch" "$HOME/.bashrc" bashrc
+else
+  echo "Keeping existing ~/.bashrc; add 'fastfetch' there manually if desired."
+fi
 install_config "$repo_dir/home/$host_name/noctalia-settings.toml" "$state_dir/noctalia/settings.toml" noctalia-settings.toml
+install_config "$repo_dir/home/noctalia-layout.toml" "$config_dir/noctalia/layout.toml" noctalia-layout.toml
 install_config "$repo_dir/home/noctalia-shell.service" "$config_dir/systemd/user/noctalia-shell.service" noctalia-shell.service
 install_config "$repo_dir/home/waybar-config.jsonc" "$config_dir/waybar/config.jsonc" waybar-config.jsonc
 install_config "$repo_dir/home/waybar-style.css" "$config_dir/waybar/style.css" waybar-style.css

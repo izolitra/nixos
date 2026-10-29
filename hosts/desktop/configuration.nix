@@ -25,6 +25,8 @@
   # Enable networking
   networking.networkmanager.enable = true;
 
+  virtualisation.docker.enable = true;
+
   # Set your time zone.
   time.timeZone = "Europe/Moscow";
 
@@ -53,7 +55,7 @@
   users.users."yaroslave" = {
     isNormalUser = true;
     description = "yaroslave";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "docker" ];
     packages = with pkgs; [];
   };
 
@@ -75,10 +77,13 @@
   environment.systemPackages = with pkgs; [
     kdePackages.dolphin
     ghostty
+    fastfetch
     fuzzel
     neovim
+    vscode
     nano
     wget
+    unzip
     firefox
     codex
     git
@@ -88,6 +93,8 @@
     telegram-desktop
     noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
+
+  fonts.packages = [ pkgs.nerd-fonts.jetbrains-mono ];
 
   environment.etc."xdg/hypr/hyprland.lua".text = builtins.readFile ./hyprland.lua;
 

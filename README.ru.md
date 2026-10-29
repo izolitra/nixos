@@ -11,6 +11,9 @@
 - `hosts/laptop/` — заготовка для будущего ноутбука с автоматической настройкой монитора.
 - `home/hyprland.lua` — Ctrl+Shift+S для скриншота области только в буфер обмена.
 - `home/ghostty-config.ghostty` — Ctrl+C копирует выделенный текст в Ghostty; без выделения прерывает команду.
+- `home/noctalia-layout.toml` — тонкая верхняя панель и левая полоса на всю высоту: это вертикальная панель Noctalia с taskbar и кнопкой приложений, без второго дока. Тема Dracula остаётся в `settings.toml`; погода использует приблизительное местоположение по IP.
+- `assets/night-garage.png` — отдельные обои в духе ночного JDM-гаража, без нарисованного интерфейса.
+- `home/fastfetch-config.jsonc` — компактный NixOS Fastfetch; пакет и JetBrainsMono Nerd Font добавлены в NixOS-конфигурацию ПК. Новый `~/.bashrc` показывает Fastfetch при открытии терминала; скрипт восстановления не перезаписывает уже существующий `.bashrc` на другой машине.
 - `home/desktop/noctalia-settings.toml` — точные настройки Noctalia с ПК. Файл `home/laptop/noctalia-settings.toml` сохраняет тему Dracula без привязки экрана блокировки к двум мониторам ПК.
 - `scripts/restore-home.sh` — восстанавливает настройки в домашней папке, предварительно сохраняя старые копии.
 - `scripts/save.sh` — забирает новые настройки из Noctalia, показывает изменения и после подтверждения отправляет их на GitHub.
@@ -52,3 +55,7 @@ sudo nixos-rebuild switch --flake .#desktop
 5. Добавь и закоммить новые файлы. Проверь `sudo nixos-rebuild build --flake .#laptop`, затем выполни `sudo nixos-rebuild switch --flake .#laptop` и `./scripts/restore-home.sh laptop`.
 
 После первого развёртывания на ноутбуке команда `./scripts/save.sh laptop` будет сохранять его настройки Noctalia. Файл оборудования ноутбука можно закоммитить для полного восстановления системы, предварительно просмотрев содержимое.
+
+## Откат оформления
+
+Перед изменением оформления 27.10.2026 сохранена копия файлов в `~/.local/state/nixos-ricing-backup-20261027-1745/`. Для быстрого отката пользовательской части верни сохранённые файлы Noctalia, Ghostty и Hyprland из этой папки в их прежние пути, а новые `~/.config/noctalia/layout.toml`, `~/.config/fastfetch/config.jsonc` и `~/.bashrc` перемести в ту же папку (`~/.bashrc` раньше отсутствовал). Затем запусти `noctalia msg config-reload` и выйди из сеанса/войди снова: нынешний экземпляр Hyprland был запущен до появления пользовательского Lua-конфига, поэтому простой `hyprctl reload` читает системный файл. Системные пакеты возвращаются предыдущим поколением NixOS через загрузочное меню либо обратным изменением `hosts/desktop/configuration.nix` и `nixos-rebuild switch`.
