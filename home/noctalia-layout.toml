@@ -22,7 +22,7 @@ radius_bottom_right = 4
 concave_edge_corners = false
 shadow = true
 capsule = false
-start = ["workspaces"]
+start = ["theme_button", "workspaces"]
 center = ["weather", "divider", "clock"]
 end = ["tray", "network", "volume", "bluetooth", "battery", "notifications", "session"]
 
@@ -53,6 +53,15 @@ show_icons = false
 focused_color = "primary"
 occupied_color = "secondary"
 empty_color = "surface_variant"
+
+[widget.theme_button]
+type = "custom_button"
+glyph = "palette"
+tooltip = "Theme Switcher"
+scale = 0.8
+
+[widget.theme_button.actions]
+left = "exec noctalia msg panel-toggle theblackdon/theme-switcher:carousel"
 
 [widget.weather]
 show_condition = false
