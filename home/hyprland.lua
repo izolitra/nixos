@@ -23,4 +23,6 @@ hl.config({
     },
 })
 
-hl.bind("CTRL + SHIFT + S", hl.dsp.exec_cmd("/run/current-system/sw/bin/noctalia msg screenshot-region --no-annotate --copy-to-clipboard --no-save-to-file"))
+-- The system config uses this shortcut for the special workspace; replace it with a region screenshot.
+hl.unbind("SUPER + SHIFT + S")
+hl.bind("SUPER + SHIFT + S", hl.dsp.exec_cmd("/run/current-system/sw/bin/noctalia msg screenshot-region --no-annotate --copy-to-clipboard --no-save-to-file"))
